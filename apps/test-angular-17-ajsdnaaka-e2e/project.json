@@ -1,0 +1,26 @@
+{
+  "name": "test-angular-17-ajsdnaaka-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/test-angular-17-ajsdnaaka-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/test-angular-17-ajsdnaaka-e2e/cypress.json",
+        "devServerTarget": "test-angular-17-ajsdnaaka:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "test-angular-17-ajsdnaaka:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["test-angular-17-ajsdnaaka"]
+}
