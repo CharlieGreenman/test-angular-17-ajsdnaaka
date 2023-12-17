@@ -23,6 +23,9 @@
       ],
       "@test-angular-17-ajsdnaaka/common/ui": [
         "libs/common/ui/src/index.ts"
+      ],
+      "@test-angular-17-ajsdnaaka/home": [
+        "libs/home/src/index.ts"
       ]
     }
   },
