@@ -2,7 +2,21 @@
   (sideNavToggle)="sideNavToggle()"
 ></test-angular-17-ajsdnaaka-global-header>
 <div class="wrapper">
-  <div class="container"></div>
+  <div class="container">
+    <test-angular-17-ajsdnaaka-global-sidenav [opened]="sideNavOpen">
+      <mat-nav-list sidenav>
+        <a
+          mat-list-item
+          routerLinkActive="active-link"
+          routerLink="/"
+          (click)="sideNavToggle()"
+        >
+          <span class="App__sidenav-text">Home</span>
+        </a>
+      </mat-nav-list>
+      <router-outlet></router-outlet>
+    </test-angular-17-ajsdnaaka-global-sidenav>
+  </div>
 </div>
 <test-angular-17-ajsdnaaka-global-footer>
 </test-angular-17-ajsdnaaka-global-footer>
